@@ -1,0 +1,99 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    background-image: url(Images/backgroundIntro.jpg);
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+h1
+{
+    margin-top: 10px 0;
+    margin: 2em;
+}
+
+p
+{
+    font-size: 1.2em;
+    margin: 5px 0 20px;
+}
+
+.cylinder-section 
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image-container 
+{
+    display: flex;
+    position: absolute;
+    width: calc(200px * 14);
+    animation: scrollLeft 30s linear infinite;
+}
+
+.image 
+{
+    flex: none;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+}
+
+.image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scrollLeft
+{
+    0% 
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(-50%);
+    }
+}
+
+.navbar
+{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px 0;
+}
+
+.navbar a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover
+{
+    color: #ff9800;
+}
